@@ -13,42 +13,92 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import Link from "next/link";
+import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { cn } from "@/lib/utils";
 
+const navigation = [
+  { name: 'Dashboard', href: '#', current: true },
+  { name: 'Team', href: '#', current: false },
+  { name: 'Projects', href: '#', current: false },
+  // { name: 'Calendar', href: '/about', current: false },
+]
 
 export default function Home() {
   return (
     <Sheet>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gradient-to-b from-[black] to-[#15162c] text-white">
-        <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-          <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300  pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-black lg:p-4 lg:dark:bg-zinc-800/30">
-            Get started mgm group&nbsp;
-            <code className="font-mono font-bold">src/app/page.tsx</code>
-          </p>
-          <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-            <a
-              className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{" "}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className="dark:invert"
-                width={100}
-                height={24}
-                priority
+      <Disclosure as="nav" className="bg-black text-white">
+        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="relative flex h-16 items-center justify-between">
+            <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              {/* Mobile menu button*/}
+              <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <span className="absolute -inset-0.5" />
+                <span className="sr-only">Open main menu</span>
+                <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
+                <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
+              </DisclosureButton>
+            </div>
+            <div className="flex flex-row justify-evenly items-center sm:items-stretch sm:justify-start">
+
+              <div className="hidden sm:ml-6 sm:block">
+                <div className="flex space-x-4">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      aria-current={item.current ? 'page' : undefined}
+                      className={cn(
+                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                        'rounded-md px-3 py-2 text-sm font-medium',
+                      )}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-shrink-0 items-center">
+              <img
+                alt="mgm"
+                src="../images/logo.png"
+                className="h-20 w-auto bg-white rounded-3xl"
               />
-            </a>
+            </div>
+
+            <div className="flex items-center pr-2 sm:static sm:ml-6 sm:pr-0">
+              <button
+                type="button"
+                className="rounded-md bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              >Contact</button>
+
+            </div>
           </div>
         </div>
-{/* 
-        <div className="bg-white p-4 rounded-md">
-          <Link href="/about">Let me</Link>
-        </div> */}
 
+        <DisclosurePanel className="sm:hidden">
+          <div className="space-y-1 px-2 pb-3 pt-2">
+            {navigation.map((item) => (
+              <DisclosureButton
+                key={item.name}
+                as="a"
+                href={item.href}
+                aria-current={item.current ? 'page' : undefined}
+                className={cn(
+                  item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                  'block rounded-md px-3 py-2 text-base font-medium',
+                )}
+              >
+                {item.name}
+              </DisclosureButton>
+            ))}
+          </div>
+        </DisclosurePanel>
+      </Disclosure>
 
+      <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gradient-to-b from-[black] to-[#15162c] text-white">
         <div className="p-4 rounded-md">
           <h5 className="text-3xl font-semibold">mgm group</h5>
         </div>
