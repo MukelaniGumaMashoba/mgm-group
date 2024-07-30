@@ -122,15 +122,15 @@ export default function Home() {
 
       {/* <main className="flex min-h-screen flex-col items-center justify-between bg-gradient-to-b from-[black] to-[#15162c] p-24 text-white"> */}
       <main className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-between gap-6 bg-white p-24">
-        <div className="flex flex-col items-center justify-between gap-2">
-          <div className="justify-items-center rounded-md p-4">
+        <div className="flex flex-col items-center justify-between gap-7">
+          <div className="justify-items-center rounded-md">
             <h4 className="text-center text-2xl md:text-5xl">
               Enhance Client Loyalt
             </h4>
           </div>
           <p className="text-center text-black md:text-xl">
             Lets Connect and Work as one team.
-            <br /> MGM helps businesses all over to succeed. <br /> We provide
+            MGM helps businesses<br /> all over to succeed. We provide
             online tools to help them interact better
             <br />
             <span className="text-center"> with clients</span>
