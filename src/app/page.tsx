@@ -24,11 +24,14 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/utils";
+import { Component } from "@/components/footer/footer";
+import { Partners } from "@/components/partners/partners";
+import AboutPage from "@/components/about/page";
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
+  { name: "Home", href: "#", current: true },
+  { name: "Team", href: "#partners", current: false },
+  { name: "About Us", href: "#about", current: false },
 ];
 
 export default function Home() {
@@ -129,14 +132,17 @@ export default function Home() {
             </h4>
           </div>
           <p className="text-center text-black md:text-xl">
-            Lets Connect and Work as one team.
-            MGM helps businesses<br /> all over to succeed. We provide
-            online tools to help them interact better
+            Lets Connect and Work as one team. MGM helps businesses
+            <br /> all over to succeed. We provide online tools to help them
+            interact better
             <br />
             <span className="text-center"> with clients</span>
           </p>
           <SheetTrigger asChild>
-            <Button variant="outline" className="w-1/3 bg-black p-1 text-white md:w-1/4">
+            <Button
+              variant="outline"
+              className="w-1/3 bg-black p-1 text-white shadow-lg shadow-slate-400 transition duration-700 ease-in-out md:w-1/4"
+            >
               Contact
             </Button>
           </SheetTrigger>
@@ -145,96 +151,108 @@ export default function Home() {
         {/* <div className="before:bg-gradient-radial after:bg-gradient-conic relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]"> */}
         <div className="mb-10 mt-10 w-full">
           <Image
-            className="h-1/2 w-full rounded-3xl"
-            src="/images/Global-Connection.png"
+            className="h-1/5 w-full rounded-3xl"
+            src="/images/unity.jpg"
             alt="Next.js Logo"
-            width={1000}
-            height={900}
+            width={800}
+            height={750}
             priority
           />
         </div>
 
-        <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+        <div className="mb-32 grid gap-2 text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
           <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group rounded-lg border border-transparent bg-black px-5 py-4 text-white transition-colors hover:border-2 hover:border-gray-500 hover:bg-white hover:text-black hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
             rel="noopener noreferrer"
           >
             <h2 className="mb-3 text-2xl font-semibold">
-              Docs{" "}
+              CRM sotware tools{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 -&gt;
               </span>
             </h2>
             <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              Find in-depth information about Next.js features and API.
+              With MGM,you get the information you need about event,notes, and
+              pipeline data
             </p>
           </a>
 
           <a
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group rounded-lg border-2 border-black border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
             rel="noopener noreferrer"
           >
             <h2 className="mb-3 text-2xl font-semibold">
-              Learn{" "}
+              Software Tools{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 -&gt;
               </span>
             </h2>
             <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
+              Our proffesional technicians can help you with software tools to
+              enhance&nbsp;communication with customers!
             </p>
           </a>
 
           <a
             href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group rounded-lg border border-transparent bg-black px-5 py-4 text-white transition-colors hover:border-2 hover:border-gray-500 hover:bg-white hover:text-black hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
             rel="noopener noreferrer"
           >
             <h2 className="mb-3 text-2xl font-semibold">
-              Templates{" "}
+              Partneship{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 -&gt;
               </span>
             </h2>
             <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              Explore starter templates for Next.js.
+              Explore our partnership agreements and contracts with our
+              partners.
             </p>
           </a>
 
           <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group rounded-lg border-2 border-black border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
             rel="noopener noreferrer"
           >
             <h2 className="mb-3 text-2xl font-semibold">
-              Deploy{" "}
+              Community{" "}
               <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
                 -&gt;
               </span>
             </h2>
             <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-              Instantly deploy your Next.js site to a shareable URL with Vercel.
+              Instantly become a part of our community by sending us email.
             </p>
           </a>
         </div>
 
+        <div className="mt-10" id="about">
+          <h4 className="mb-10 text-center text-2xl font-semibold">
+            Our Company
+          </h4>
+          <AboutPage />
+        </div>
 
-        <div>
-          <h4>About</h4>
+        <div id="partners">
+          <Partners />
         </div>
       </main>
 
+      <footer>
+        <Component />
+      </footer>
+
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>Edit profile</SheetTitle>
+          <SheetTitle>Contact Us</SheetTitle>
           <SheetDescription>
-            Make changes to your profile here. Click save when you're done.
+            Make change. Click save when you're done.
           </SheetDescription>
         </SheetHeader>
         <div className="grid gap-4 py-4">
@@ -242,13 +260,32 @@ export default function Home() {
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
+            <Input
+              id="name"
+              placeholder="Pedro Duarte"
+              className="col-span-3"
+            />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
+            <Label htmlFor="email" className="text-right">
+              email
             </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
+            <Input
+              id="email"
+              placeholder="kWZpX@example.com"
+              className="col-span-3"
+            />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="Message" className="text-right">
+              Message
+            </Label>
+            <Input
+              type="textarea"
+              id="Message"
+              placeholder="Enquire a message"
+              className="col-span-3"
+            />
           </div>
         </div>
         <SheetFooter>
