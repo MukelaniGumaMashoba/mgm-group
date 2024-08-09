@@ -13,11 +13,11 @@ function AboutPage() {
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
       <div>
         <Image
-          src="/images/wololo.jpg"
+          src="/images/animated.gif"
           alt="wololo"
           width={300}
           height={300}
-          className="h-auto w-full object-cover"
+          className="h-4/5 w-full object-cover"
         />
       </div>
       <div className="p-4">
