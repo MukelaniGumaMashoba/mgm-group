@@ -23,15 +23,16 @@ function AboutPage() {
       <div className="p-4">
         <p className="mb-4">MGM Group is the about conglomerate.</p>
         <p>
-          We work along with businesses or organisations in many different
-          sectors which include Education , Logistics and many more. Recently we
-          have partner up with NMA Logistics which is based in offering bike
-          rentals for Uber Eat drivers. Working together as companies to bring
-          solutions to communities. Partnership with us is based on terms and
-          conditions and we treat everyone equal. MGM Group is here to help
-          innovation toward all of us, using Partnership as tool of success. Let
-          not limit ourselves, let group work together. Contact us for more
-          details.
+          MGM Group, we collaborate with businesses and organizations across a
+          wide range of sectors, including education, logistics, and more. Our
+          recent partnership with NMA Logistics, a company specializing in bike
+          rentals for Uber Eats drivers, exemplifies our commitment to creating
+          innovative solutions that benefit communities. We believe that success
+          is built through strong partnerships, and we approach every
+          collaboration with fairness, transparency, and mutual respect. Our
+          goal is to foster innovation and drive progress together. Let's break
+          boundaries and achieve more as a collective. Contact us to let work
+          together to create meaningful impact.
         </p>
 
         <div className="mt-4">
