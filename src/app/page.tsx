@@ -162,7 +162,7 @@ export default function Home() {
 
         <div className="mb-32 grid gap-2 text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
           <a
-            className="group rounded-lg border border-transparent bg-black px-5 py-4 text-white transition-colors hover:border-2 hover:border-gray-500 hover:bg-white hover:text-black hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group rounded-lg border border-transparent bg-black px-5 py-4 text-white transition-colors duration-700 ease-in-out hover:border-2 hover:border-gray-500 hover:bg-white hover:text-black hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -180,7 +180,7 @@ export default function Home() {
 
           <a
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            className="group rounded-lg border-2 border-black border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group rounded-lg border-2 border-black border-transparent px-5 py-4 transition-colors duration-700 ease-in-out hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -198,7 +198,7 @@ export default function Home() {
 
           <a
             href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border border-transparent bg-black px-5 py-4 text-white transition-colors hover:border-2 hover:border-gray-500 hover:bg-white hover:text-black hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="roup rounded-lg border border-transparent bg-black px-5 py-4 text-white transition-colors duration-700 ease-in-out hover:border-2 hover:border-gray-500 hover:bg-white hover:text-black hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -216,7 +216,7 @@ export default function Home() {
 
           <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            className="group rounded-lg border-2 border-black border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+            className="group rounded-lg border-2 border-black border-transparent px-5 py-4 transition-colors duration-700 ease-in-out hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -230,6 +230,7 @@ export default function Home() {
               Instantly become a part of our community by sending us email.
             </p>
           </a>
+          <p className="block w-full border-2 border-b-black lg:hidden"></p>
         </div>
 
         <div className="mt-10" id="about">
@@ -248,14 +249,14 @@ export default function Home() {
         <Component />
       </footer>
 
-      <SheetContent>
+      <SheetContent side="bottom">
         <SheetHeader>
           <SheetTitle>Contact Us</SheetTitle>
           <SheetDescription>
             Make change. Click save when you're done.
           </SheetDescription>
         </SheetHeader>
-        <div className="grid gap-4 py-4">
+        <div className="grid grid-cols-1 items-center justify-center gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
               Name
@@ -290,7 +291,9 @@ export default function Home() {
         </div>
         <SheetFooter>
           <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
+            <Button type="submit" variant="default">
+              Save changes
+            </Button>
           </SheetClose>
         </SheetFooter>
       </SheetContent>

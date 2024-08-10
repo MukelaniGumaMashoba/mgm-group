@@ -27,12 +27,14 @@ function AboutPage() {
           wide range of sectors, including education, logistics, and more. Our
           recent partnership with NMA Logistics, a company specializing in bike
           rentals for Uber Eats drivers, exemplifies our commitment to creating
-          innovative solutions that benefit communities. We believe that success
-          is built through strong partnerships, and we approach every
-          collaboration with fairness, transparency, and mutual respect. Our
-          goal is to foster innovation and drive progress together. Let's break
-          boundaries and achieve more as a collective. Contact us to let work
-          together to create meaningful impact.
+          innovative solutions that benefit communities.
+          <span className="hidden md:block">
+            We believe that success is built through strong partnerships, and we
+            approach every collaboration with fairness, transparency, and mutual
+            respect. Our goal is to foster innovation and drive progress
+            together. Let's break boundaries and achieve more as a collective.
+            Contact us to let work together to create meaningful impact.
+          </span>
         </p>
 
         <div className="mt-4">

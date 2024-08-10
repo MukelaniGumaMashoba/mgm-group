@@ -31,7 +31,8 @@ export function Partners() {
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="flex h-28 flex-col items-center rounded-md border-2 bg-black p-2 sm:w-1/3 lg:w-auto"
+              className="grid h-28 grid-cols-1 items-center justify-center rounded-md border-2 bg-black p-2 lg:grid lg:w-auto lg:grid-cols-1"
+              
             >
               <Image
                 src={partner.logo}
@@ -40,8 +41,8 @@ export function Partners() {
                 width={100}
                 height={100}
               />
-              <div>
-                <p className="text-md text-center font-medium">
+              <div className="hidden lg:block">
+                <p className="text-center font-medium">
                   {partner.name}
                 </p>
               </div>
