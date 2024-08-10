@@ -161,9 +161,10 @@ export default function Home() {
         </div>
 
         <div className="mb-32 grid gap-2 text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-          <a
+          <Link
+            href="#/dashboard"
             className="group rounded-lg border border-transparent bg-black px-5 py-4 text-white transition-colors duration-700 ease-in-out hover:border-2 hover:border-gray-500 hover:bg-white hover:text-black hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
+            target="_self"
             rel="noopener noreferrer"
           >
             <h2 className="mb-3 text-2xl font-semibold">
@@ -176,9 +177,9 @@ export default function Home() {
               With MGM,you get the information you need about event,notes, and
               pipeline data
             </p>
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             className="group rounded-lg border-2 border-black border-transparent px-5 py-4 transition-colors duration-700 ease-in-out hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
             target="_blank"
@@ -194,12 +195,12 @@ export default function Home() {
               Our proffesional technicians can help you with software tools to
               enhance&nbsp;communication with customers!
             </p>
-          </a>
+          </Link>
 
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          <Link
+            href="#/"
             className="roup rounded-lg border border-transparent bg-black px-5 py-4 text-white transition-colors duration-700 ease-in-out hover:border-2 hover:border-gray-500 hover:bg-white hover:text-black hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
+            target="_self"
             rel="noopener noreferrer"
           >
             <h2 className="mb-3 text-2xl font-semibold">
@@ -212,12 +213,12 @@ export default function Home() {
               Explore our partnership agreements and contracts with our
               partners.
             </p>
-          </a>
+          </Link>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          <Link
+            href="#partners"
             className="group rounded-lg border-2 border-black border-transparent px-5 py-4 transition-colors duration-700 ease-in-out hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
+            target="_self"
             rel="noopener noreferrer"
           >
             <h2 className="mb-3 text-2xl font-semibold">
@@ -229,7 +230,7 @@ export default function Home() {
             <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
               Instantly become a part of our community by sending us email.
             </p>
-          </a>
+          </Link>
           <p className="block w-full border-2 border-b-black lg:hidden"></p>
         </div>
 
