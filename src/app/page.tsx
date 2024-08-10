@@ -235,7 +235,7 @@ export default function Home() {
         </div>
 
         <div className="mt-10" id="about">
-          <h4 className="mb-10 text-center text-2xl font-semibold">
+          <h4 className="text-center text-2xl font-semibold">
             Our Company
           </h4>
           <AboutPage />
