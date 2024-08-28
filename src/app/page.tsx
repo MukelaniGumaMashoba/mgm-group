@@ -27,6 +27,7 @@ import { cn } from "@/lib/utils";
 import { Component } from "@/components/footer/footer";
 import { Partners } from "@/components/partners/partners";
 import AboutPage from "@/components/about/page";
+import { ContactUs } from "@/components/email/email";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
@@ -235,9 +236,7 @@ export default function Home() {
         </div>
 
         <div className="mt-10" id="about">
-          <h4 className="text-center text-2xl font-semibold">
-            Our Company
-          </h4>
+          <h4 className="text-center text-2xl font-semibold">Our Company</h4>
           <AboutPage />
         </div>
 
@@ -251,52 +250,7 @@ export default function Home() {
       </footer>
 
       <SheetContent side="bottom">
-        <SheetHeader>
-          <SheetTitle>Contact Us</SheetTitle>
-          <SheetDescription>
-            Make change. Click save when you're done.
-          </SheetDescription>
-        </SheetHeader>
-        <div className="grid grid-cols-1 items-center justify-center gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input
-              id="name"
-              placeholder="Pedro Duarte"
-              className="col-span-3"
-            />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="email" className="text-right">
-              email
-            </Label>
-            <Input
-              id="email"
-              placeholder="kWZpX@example.com"
-              className="col-span-3"
-            />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="Message" className="text-right">
-              Message
-            </Label>
-            <Input
-              type="textarea"
-              id="Message"
-              placeholder="Enquire a message"
-              className="col-span-3"
-            />
-          </div>
-        </div>
-        <SheetFooter>
-          <SheetClose asChild>
-            <Button type="submit" variant="default">
-              Save changes
-            </Button>
-          </SheetClose>
-        </SheetFooter>
+        <ContactUs />
       </SheetContent>
     </Sheet>
   );
