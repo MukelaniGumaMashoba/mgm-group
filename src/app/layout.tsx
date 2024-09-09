@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   creator: "Mukelani Guma Mashoba",
   applicationName: "MGM Group",
   keywords: ["Technology", "MGM", "Group", "mgm group", "mukelani mashoba"],
+  publisher: "MGM Group",
+  metadataBase: new URL("https://mgmgroup.netlify.app/"),
 };
 
 export default function RootLayout({

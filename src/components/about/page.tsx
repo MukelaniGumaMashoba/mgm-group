@@ -22,7 +22,7 @@ function AboutPage() {
       </div>
       <div className="p-4">
         <p className="mb-4">MGM Group is the about conglomerate.</p>
-        <p>
+        <p className="w-full">
           MGM Group, we collaborate with businesses and organizations across a
           wide range of sectors, including education, logistics, and more. Our
           recent partnership with NMA Logistics, a company specializing in bike
@@ -37,7 +37,7 @@ function AboutPage() {
           </span>
         </p>
 
-        <div className="mt-4">
+        <div className="mt-4 flex justify-center">
           <Button>
             <Link href="#">.</Link>
             Send us email

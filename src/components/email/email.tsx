@@ -54,6 +54,10 @@ export const ContactUs = () => {
           <SheetTitle>Contact Us</SheetTitle>
           <SheetDescription>
             Make change. Click save when you're done.
+            <div className="border-b border-gray-400 py-2">
+              <p className="mt-4 font-semibold">0638619542</p>
+              <p className="font-semibold">mgmgroupconnect@gmail.com</p>
+            </div>
           </SheetDescription>
         </SheetHeader>
         <div className="grid grid-cols-1 items-center justify-center gap-4 py-4">
@@ -89,7 +93,7 @@ export const ContactUs = () => {
               type="textarea"
               id="Message"
               placeholder="Enquire a message"
-              className="col-span-3"
+              className="col-span-3 h-24"
               value={Message}
               onChange={(e) => setMessage(e.target.value)}
             />
