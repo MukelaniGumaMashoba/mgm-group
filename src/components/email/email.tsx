@@ -71,6 +71,7 @@ export const ContactUs = () => {
               className="col-span-3"
               value={Name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
@@ -83,6 +84,7 @@ export const ContactUs = () => {
               className="col-span-3"
               value={Email}
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
@@ -96,6 +98,7 @@ export const ContactUs = () => {
               className="col-span-3 h-24"
               value={Message}
               onChange={(e) => setMessage(e.target.value)}
+              required
             />
           </div>
         </div>
