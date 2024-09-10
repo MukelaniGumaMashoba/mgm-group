@@ -125,7 +125,7 @@ export default function Home() {
       </Disclosure>
 
       {/* <main className="flex min-h-screen flex-col items-center justify-between bg-gradient-to-b from-[black] to-[#15162c] p-24 text-white"> */}
-      <main className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-between gap-6 bg-white p-24">
+      <main className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-between gap-6 bg-white p-5 md:p-24 lg:p-24">
         <div className="flex flex-col items-center justify-between gap-7">
           <div className="justify-items-center rounded-md">
             <h4 className="text-center text-2xl md:text-5xl">
