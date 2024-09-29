@@ -1,0 +1,12 @@
+* Loyalty is misspelled
+* Maybe include a dedicated section for highlighting how MGM Group 
+    is driving innovation, possibly through specific projects or partnerships.
+    --"CRM software tool"-- 
+* Maybe include a page to provide regular updates on new projects,
+    partnerships, and company developments.
+* A breakdown of the digital solutions MGM offers to help 
+    businesses interact with clients might be a good addition
+* Something encouraging people to “Start a Conversation” or “Connect with Us” 
+    to explore collaborative opportunities on the --Contact Us-- page
+* The --Save changes-- btn still send a response even if the sheet is empty
+* Can't return to --Home-- if already on --Contact Us--

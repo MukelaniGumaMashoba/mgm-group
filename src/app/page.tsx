@@ -129,7 +129,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-between gap-7">
           <div className="justify-items-center rounded-md">
             <h4 className="text-center text-2xl md:text-5xl">
-              Enhance Client Loyalt
+              Enhance Client Loyalty
             </h4>
           </div>
           <p className="text-center text-black md:text-xl">
@@ -144,7 +144,7 @@ export default function Home() {
               variant="outline"
               className="w-1/3 bg-black p-1 text-white shadow-lg shadow-slate-400 transition duration-700 ease-in-out md:w-1/4"
             >
-              Contact
+              Let's Talk
             </Button>
           </SheetTrigger>
         </div>

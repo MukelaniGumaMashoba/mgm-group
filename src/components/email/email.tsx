@@ -19,6 +19,10 @@ export const ContactUs = () => {
   const [Message, setMessage] = useState("");
 
   const sendEmail = () => {
+    if (Email === "" || Name === "" || Message === "") {
+      alert("Please fill in all the fields");
+      return;
+    }
     const templateParams = {
       from_name: Name,
       email: Email,
@@ -26,24 +30,24 @@ export const ContactUs = () => {
     };
 
     emailjs
-      .send(
-        "service_m0idxfb",
-        "template_2y7q8du",
-        templateParams,
-        "fYw4Ynaw7srWGmG2J"
-      )
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          alert("Thank you for your message!");
-          setName("");
-          setEmail("");
-          setMessage("");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+    .send(
+      "service_m0idxfb",
+      "template_2y7q8du",
+      templateParams,
+      "fYw4Ynaw7srWGmG2J"
+    )
+    .then(
+      () => {
+        console.log("SUCCESS!");
+        alert("Thank you for your message!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      },
+      (error) => {
+        console.log("FAILED...", error.text);
+      }
+    );
   };
 
   return (
