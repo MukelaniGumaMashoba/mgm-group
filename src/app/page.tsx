@@ -28,6 +28,7 @@ import { Component } from "@/components/footer/footer";
 import { Partners } from "@/components/partners/partners";
 import AboutPage from "@/components/about/page";
 import { ContactUs } from "@/components/email/email";
+import { NavigationMenuDemo } from "@/components/Navigation/navbar";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
@@ -60,7 +61,7 @@ export default function Home() {
             <div className="flex flex-row items-center justify-evenly sm:items-stretch sm:justify-start">
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
-                  {navigation.map((item) => (
+                  {/* {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -74,7 +75,8 @@ export default function Home() {
                     >
                       {item.name}
                     </a>
-                  ))}
+                  ))} */}
+                  <NavigationMenuDemo />
                 </div>
               </div>
             </div>
