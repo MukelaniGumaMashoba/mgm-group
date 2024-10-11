@@ -16,42 +16,48 @@ import {
 } from "@/components/ui/navigation-menu"
 import Image from "next/image"
 
-const components: { title: string; href: string; description: string }[] = [
+const components: { image: string, title: string; href: string; description: string }[] = [
     {
-        title: "Alert Dialog",
-        href: "/docs/primitives/alert-dialog",
+        image: '/images/techIcon.jpg',
+        title: "MGM Tech Solutions",
+        href: "#",
         description:
-            "A modal dialog that interrupts the user with important content and expects a response.",
+            "IT department deals with building and maintaining of softwares.",
     },
     {
-        title: "Hover Card",
-        href: "/docs/primitives/hover-card",
+        image: '/images/partner.jpg',
+        title: "Partnership",
+        href: "#",
         description:
-            "For sighted users to preview content available behind a link.",
+            "We as mgm partners we offer and accept partnership with our customers.",
     },
     {
-        title: "Progress",
-        href: "/docs/primitives/progress",
+        image: '/images/community.jpg',
+        title: "Community",
+        href: "#",
         description:
-            "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+            "Build communities all over South Africa.",
     },
     {
-        title: "Scroll-area",
-        href: "/docs/primitives/scroll-area",
-        description: "Visually or semantically separates content.",
+        image: '/images/companies.jpg',
+        title: "Companies",
+        href: "#",
+        description: "Our current partners are mg mobile, nma logistics and many more.",
     },
-    {
-        title: "Tabs",
-        href: "/docs/primitives/tabs",
-        description:
-            "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-    },
-    {
-        title: "Tooltip",
-        href: "/docs/primitives/tooltip",
-        description:
-            "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-    },
+    // {
+    //     image: '/images/logo.png',
+    //     title: "Tabs",
+    //     href: "/docs/primitives/tabs",
+    //     description:
+    //         "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+    // },
+    // {
+    //     image: '/images/logo.png',
+    //     title: "Tooltip",
+    //     href: "/docs/primitives/tooltip",
+    //     description:
+    //         "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    // },
 ]
 
 export function NavigationMenuDemo() {
@@ -79,21 +85,21 @@ export function NavigationMenuDemo() {
                                             MGM Partners
                                         </div>
                                         <p className="text-sm leading-tight text-muted-foreground">
-                                            Beautifully designed components that you can copy and
-                                            paste into your apps. Accessible. Customizable. Open
-                                            Source.
+                                            MGM Partners is a software and services company that helps businesses
+                                            all over to succeed.And help them
+                                            interact better with clients and customers.
                                         </p>
                                     </a>
                                 </NavigationMenuLink>
                             </li>
                             <ListItem href="#About" title="Introduction">
-                                Re-usable components built using Radix UI and Tailwind CSS.
+                                As company mgm we bring tech and companies together.
                             </ListItem>
                             <ListItem href="#" title="Company Goals">
-                                How to install dependencies and structure your app.
+                                Provide a fair partnership and support with our customers.
                             </ListItem>
-                            <ListItem href="/docs/primitives/typography" title="Partners">
-                                Styles for headings, paragraphs, lists...etc
+                            <ListItem href="" title="Partners">
+                                Let partner as mgm and move foward.
                             </ListItem>
                         </ul>
                     </NavigationMenuContent>
@@ -105,9 +111,17 @@ export function NavigationMenuDemo() {
                             {components.map((component) => (
                                 <ListItem
                                     key={component.title}
-                                    title={component.title}
                                     href={component.href}
                                 >
+                                    <div className="flex flex-row items-center mt-5">
+                                        <p className="text-sm font-medium leading-none text-black">{component.title}</p>
+                                        <Image
+                                            alt="mgm"
+                                            src={component.image}
+                                            width={40}
+                                            height={20}
+                                            className="rounded-lg" />
+                                    </div>
                                     {component.description}
                                 </ListItem>
                             ))}
