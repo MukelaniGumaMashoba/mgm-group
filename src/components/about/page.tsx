@@ -10,7 +10,7 @@ function AboutPage() {
     "mailto:mukelanilastborn@gmail.com?subject=SendMail&body=Description";
 
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 mt-5">
       <div>
         <Image
           src="/images/animated.gif"

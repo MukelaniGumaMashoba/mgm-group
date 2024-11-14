@@ -29,6 +29,7 @@ import { Partners } from "@/components/partners/partners";
 import AboutPage from "@/components/about/page";
 import { ContactUs } from "@/components/email/email";
 import { NavigationMenuDemo } from "@/components/Navigation/navbar";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
@@ -37,6 +38,24 @@ const navigation = [
 ];
 
 export default function Home() {
+  const words = [
+    {
+      text: "Build",
+    },
+    {
+      text: "great",
+    },
+    {
+      text: "partnerships",
+    },
+    {
+      text: "with",
+    },
+    {
+      text: "mgm partners.",
+    },
+  ];
+
   return (
     <Sheet>
       <Disclosure as="nav" className="bg-white text-black">
@@ -133,6 +152,7 @@ export default function Home() {
             <h4 className="text-center text-2xl md:text-5xl">
               Enhance Client Loyalty
             </h4>
+            <TypewriterEffectSmooth words={words} />
           </div>
           <p className="text-center text-black md:text-xl">
             Lets Connect and Work as one team. MGM helps businesses
