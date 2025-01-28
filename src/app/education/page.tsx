@@ -6,8 +6,10 @@ export default function education() {
       <h2>MGM Education</h2>
       <div>
         <p>Education as they say it the key to success, As MgM we also provide additional paid services to student to help them to ace their subjects
-          and also make it in future 
+          and also make it in future
         </p>
+
+        <p> We leave by the Tripple C rule(Communication,Collaboractive and Creativity)</p>
       </div>
     </div>
   )

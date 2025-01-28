@@ -35,6 +35,7 @@ const navigation = [
   { name: "Home", href: "#", current: true },
   { name: "Team", href: "#partners", current: false },
   { name: "About Us", href: "#about", current: false },
+  { name: "Education", href: "/education", current: false },
 ];
 
 export default function Home() {
