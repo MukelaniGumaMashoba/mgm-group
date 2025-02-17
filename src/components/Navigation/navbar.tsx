@@ -34,7 +34,7 @@ const components: { image: string, title: string; href: string; description: str
     {
         image: '/images/community.jpg',
         title: "Community",
-        href: "#",
+        href: "/community",
         description:
             "Build communities all over South Africa.",
     },
