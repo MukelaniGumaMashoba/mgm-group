@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { CircleChevronLeft } from 'lucide-react';
 import Image from 'next/image';
 import ElearningServices from '@/components/education/services';
+import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
 
 export default function Education() {
   return (
@@ -18,7 +19,6 @@ export default function Education() {
         </div>
         <h2 className="text-3xl font-bold mb-4 text-center">MGM Education</h2>
       </div>
-
 
       <div className="flex justify-center bg-black">
         <div className="w-11/12 flex flex-row md:flex-row justify-between items-center p-6 bg-white rounded-lg shadow-md">
@@ -36,7 +36,6 @@ export default function Education() {
           </div>
         </div>
       </div>
-
 
       <div>
         <ElearningServices />
