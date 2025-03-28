@@ -1,80 +1,64 @@
 "use client";
 
-import { WorldMap } from '@/components/areas/worldConnection';
+import React, { useEffect, useState } from 'react';
 import { Component } from '@/components/footer/footer';
-import { FocusCards } from '@/components/imagesEducation/imgEducation';
 import { Button } from '@/components/ui/button';
-import { CircleChevronLeft, NfcIcon } from 'lucide-react';
+import { CircleChevronLeft } from 'lucide-react';
 import Image from 'next/image';
-import { Router } from 'next/router';
+import ElearningServices from '@/components/education/services';
 
 export default function Education() {
   return (
-    <div className=" bg-gray-100 min-h-screen">
-      <div>
-        <CircleChevronLeft size={30} onClick={() => {
-          window.history.back();
-        }} />
-      </div>
-      <h2 className="text-3xl font-bold mb-4 text-center">MGM Education</h2>
-
-      <div>
+    <div className=" bg-black min-h-screen flex flex-col p-1 gap-4">
+      <div className='bg-white p-2 rounded-lg shadow-md flex justify-between items-center'>
         <div>
-          <h2>Smart Learnind Deeper & More</h2>
-          <p>Search and gain more knowledge</p>
-
-          <Button title='Start' />
+          <CircleChevronLeft size={30} onClick={() => {
+            window.history.back();
+          }} />
         </div>
-
-        <div>
-          <Image src="/education.jpg" alt="Education" width={500} height={500} />
-        </div>
+        <h2 className="text-3xl font-bold mb-4 text-center">MGM Education</h2>
       </div>
 
-      <div className="bg-white p-6 rounded-lg shadow-md">
-        <h4>About us</h4>
 
-        <p className="mb-4 text-gray-700">
-          We are passionate about empowering learners WorldWide,
-          Education as they say is the key to success. At MGM, we also provide additional paid services to students to help them ace their subjects
-          and succeed in the future.
-        </p>
-        <p className="text-gray-700">
-          We live by the Triple C rule (Communication, Collaboration, and Creativity).
-        </p>
+      <div className="flex justify-center bg-black">
+        <div className="w-11/12 flex flex-row md:flex-row justify-between items-center p-6 bg-white rounded-lg shadow-md">
+          <div className="w-1/2">
+            <h2 className='text-5xl'>Knowledge At Your Fingertips Explore Our E-Learning Platform</h2>
+            <p>Our platforms are mainly focused in developing remote schools areas, which cater to various interests
+              and skills. We offer a wide range of courses, from academic subjects to practical skills, ensuring that there is something for everyone.
+              Our platform is designed to be user-friendly and accessible, making it easy for students to navigate and find the courses that suit their needs.
+            </p>
 
-        {/* Stats */}
-        <div>
-          <h6>Our Stats</h6>
-          <div>
-            <NfcIcon size={30} />
-            <span>1000+ Students</span>
-
-            <NfcIcon size={30} />
-            <span>100+ Teachers</span>
-
-            <NfcIcon size={30} />
-            <span>10+ Courses</span>
+            <Button className="w-52 mt-5 bg-black">Start</Button>
+          </div>
+          <div className="w-1/2 flex justify-center items-center">
+            <Image src="/images/edu.jpg" alt="Education" width={500} height={500} />
           </div>
         </div>
-
-      </div>
-
-
-
-
-
-
-
-      <div>
-        <FocusCards />
       </div>
 
 
       <div>
-        <WorldMap />
+        <ElearningServices />
       </div>
 
+      <div className="flex justify-center">
+        <div className="w-11/12 flex justify-center flex-col md:flex-row gap-4 p-6 bg-white rounded-lg shadow-md">
+          <div className="w-1/3 flex justify-center items-center">
+            <Image src="/images/edu.jpg" alt="Education" width={500} height={500} />
+          </div>
+          <div className="w-1/2 flex flex-col justify-center items-start p-4">
+            <h1 className='text-4xl'>The Rise Of E-Learning Trasnforming Education</h1>
+            <p>The rise of elearning has fundamentally transformed the educational landscape
+              , making quality education accessible to learners worldwide. With the advent of technology,
+              traditional classroom settings have evolved into dynamic online platforms that cater to diverse
+              learning styles and preferences. E-learning offers flexibility, allowing students to learn
+              at their own pace and convenience.
+            </p>
+            <Button className='w-52 mt-4'>Learn More</Button>
+          </div>
+        </div>
+      </div>
 
       <Component />
     </div>
