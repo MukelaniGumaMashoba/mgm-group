@@ -7,8 +7,14 @@ import { CircleChevronLeft } from 'lucide-react';
 import Image from 'next/image';
 import ElearningServices from '@/components/education/services';
 import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
+import { TextGenerateEffect } from "@/components/ui/text-generate-effext";
 
 export default function Education() {
+  const words = `The rise of elearning has fundamentally transformed the educational landscape, making quality education accessible to learners worldwide. With the advent of technology,
+              traditional classroom settings have evolved into dynamic online platforms that cater to diverse
+              learning styles and preferences.E-learning offers flexibility, allowing students to learn
+              at their own pace and convenience.`;
+
   return (
     <div className=" bg-black min-h-screen flex flex-col p-1 gap-4">
       <div className='bg-white p-2 rounded-lg shadow-md flex justify-between items-center'>
@@ -38,6 +44,9 @@ export default function Education() {
       </div>
 
       <div>
+        <div>
+          <h1 className='text-5xl font-bold mb-4 mt-5 text-center text-white'>Our Services</h1>
+        </div>
         <ElearningServices />
       </div>
 
@@ -48,12 +57,7 @@ export default function Education() {
           </div>
           <div className="w-1/2 flex flex-col justify-center items-start p-4">
             <h1 className='text-4xl'>The Rise Of E-Learning Trasnforming Education</h1>
-            <p>The rise of elearning has fundamentally transformed the educational landscape
-              , making quality education accessible to learners worldwide. With the advent of technology,
-              traditional classroom settings have evolved into dynamic online platforms that cater to diverse
-              learning styles and preferences. E-learning offers flexibility, allowing students to learn
-              at their own pace and convenience.
-            </p>
+            <TextGenerateEffect words={words} className="text-black" />
             <Button className='w-52 mt-4'>Learn More</Button>
           </div>
         </div>
