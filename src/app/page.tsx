@@ -153,7 +153,6 @@ export default function Home() {
             <h4 className="text-center text-2xl md:text-5xl">
               Enhance Client Loyalty
             </h4>
-            <TypewriterEffectSmooth words={words} />
           </div>
           <p className="text-center text-black md:text-xl">
             Lets Connect and Work as one team. MGM helps businesses
@@ -265,6 +264,10 @@ export default function Home() {
 
         <div id="partners">
           <Partners />
+        </div>
+
+        <div className="-mt-6">
+          <TypewriterEffectSmooth words={words} />
         </div>
       </main>
 
